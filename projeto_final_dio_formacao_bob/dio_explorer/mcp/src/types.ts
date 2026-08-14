@@ -15,8 +15,22 @@ export interface Trilha {
   livesAoVivo: string[];
 }
 
+export interface Aceleracao {
+  id: number;
+  nome: string;
+  tecnologia: string;
+  nivel: string;
+  numeroModulos: number;
+  xpTotal: number;
+  badgesDisponiveis: string[];
+  promocoes: string[];
+  vitalicio: boolean;
+  livesAoVivo: string[];
+}
+
 export interface TrilhasData {
   trilhas: Trilha[];
+  aceleracoes: Aceleracao[];
 }
 
 export interface Desafio {
@@ -50,6 +64,7 @@ export interface ApiResponse<T = any> {
 
 export interface ToolInput {
   tecnologia?: string;
+  trilha?: string;
   nivel?: string;
   nome?: string;
   filtro?: string;

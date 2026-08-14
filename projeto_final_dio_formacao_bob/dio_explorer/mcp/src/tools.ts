@@ -3,7 +3,7 @@
  */
 
 import { z } from 'zod';
-import { buscarTrilhaPorTecnologia, gerarDesafio, gerarCertificado } from './services.js';
+import { buscarTrilhaPorTecnologia, buscarAceleracaoPorTrilha, gerarDesafio, gerarCertificado } from './services.js';
 import type { ToolInput } from './types.js';
 
 /**
@@ -11,6 +11,13 @@ import type { ToolInput } from './types.js';
  */
 export const buscarTrilhaSchema = z.object({
   tecnologia: z.string().min(1).describe('Nome da tecnologia ou trilha a buscar (ex: Python, Java, React)')
+});
+
+/**
+ * Schema de validação para buscar acelerações por trilha
+ */
+export const buscarAceleracaoSchema = z.object({
+  trilha: z.string().min(1).describe('Nome da trilha ou tecnologia para buscar acelerações (ex: Java, Python, React)')
 });
 
 /**
@@ -83,6 +90,20 @@ export const tools = [
         }
       },
       required: ['nome', 'tecnologia']
+    }
+  },
+  {
+    name: 'buscar_aceleracao',
+    description: 'Busca acelerações AI Powered disponíveis na DIO com base na trilha ou tecnologia informada, incluindo módulos, XP, badges e lives ao vivo',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        trilha: {
+          type: 'string',
+          description: 'Nome da trilha ou tecnologia para buscar acelerações (ex: Java, Python, Angular, React, Node.js)'
+        }
+      },
+      required: ['trilha']
     }
   },
   {
@@ -167,6 +188,31 @@ export const toolHandlers = {
           {
             type: 'text',
             text: `❌ Erro ao gerar certificado: ${error instanceof Error ? error.message : 'Erro desconhecido'}`
+          }
+        ],
+        isError: true
+      };
+    }
+  },
+
+  buscar_aceleracao: async (input: ToolInput) => {
+    try {
+      buscarAceleracaoSchema.parse(input);
+      const resultado = buscarAceleracaoPorTrilha(input.trilha!);
+      return {
+        content: [
+          {
+            type: 'text',
+            text: resultado
+          }
+        ]
+      };
+    } catch (error) {
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `❌ Erro ao buscar aceleração: ${error instanceof Error ? error.message : 'Erro desconhecido'}`
           }
         ],
         isError: true

@@ -5,7 +5,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
-import type { Trilha, TrilhasData, Desafio, CertificadoData } from './types.js';
+import type { Trilha, Aceleracao, TrilhasData, Desafio, CertificadoData } from './types.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -17,6 +17,14 @@ function carregarTrilhas(): TrilhasData {
   const dataPath = path.join(__dirname, '../../data/trilhas_dio.json');
   const jsonData = fs.readFileSync(dataPath, 'utf-8');
   return JSON.parse(jsonData);
+}
+
+/**
+ * Carrega apenas as acelerações do arquivo JSON
+ */
+export function carregarAceleracoes(): Aceleracao[] {
+  const data = carregarTrilhas();
+  return data.aceleracoes;
 }
 
 /**
@@ -98,6 +106,78 @@ export function buscarTrilhaPorTecnologia(tecnologia: string): string {
     return resultado;
   } catch (error) {
     return `❌ Erro ao carregar as trilhas: ${error instanceof Error ? error.message : 'Erro desconhecido'}`;
+  }
+}
+
+/**
+ * Busca acelerações por trilha/tecnologia
+ */
+export function buscarAceleracaoPorTrilha(trilha: string): string {
+  try {
+    const data = carregarTrilhas();
+
+    const aceleracoesEncontradas = data.aceleracoes.filter((ac: Aceleracao) =>
+      ac.tecnologia.toLowerCase().includes(trilha.toLowerCase()) ||
+      ac.nome.toLowerCase().includes(trilha.toLowerCase())
+    );
+
+    if (aceleracoesEncontradas.length === 0) {
+      return `❌ Nenhuma aceleração encontrada para a trilha: **${trilha}**\n\n` +
+             `💡 Acelerações disponíveis para: Java, Python, Angular, React, Node.js e mais!\n` +
+             `Use \`listar_tecnologias\` para ver todas as opções.`;
+    }
+
+    let resultado = `# ⚡ Acelerações DIO - AI Powered\n\n`;
+    resultado += `🔍 **Filtro aplicado: ${trilha}**\n`;
+    resultado += `📚 **${aceleracoesEncontradas.length} aceleração(ões) encontrada(s)**\n\n`;
+    resultado += `---\n\n`;
+
+    aceleracoesEncontradas.forEach((ac: Aceleracao, index: number) => {
+      resultado += `## ${index + 1}. ${ac.nome}\n\n`;
+      resultado += `### 📊 Informações Gerais\n`;
+      resultado += `- **Tecnologia:** ${ac.tecnologia}\n`;
+      resultado += `- **Nível:** ${ac.nivel}\n`;
+      resultado += `- **Módulos:** ${ac.numeroModulos}\n`;
+      resultado += `- **XP Total:** ${ac.xpTotal.toLocaleString('pt-BR')} pontos\n`;
+      resultado += `- **Acesso Vitalício:** ${ac.vitalicio ? '✅ Sim' : '❌ Não'}\n\n`;
+
+      resultado += `### 🏆 Badges Disponíveis\n`;
+      ac.badgesDisponiveis.forEach((badge: string) => {
+        resultado += `- 🎖️ ${badge}\n`;
+      });
+      resultado += `\n`;
+
+      if (ac.livesAoVivo.length > 0) {
+        resultado += `### 🎥 Lives ao Vivo\n`;
+        ac.livesAoVivo.forEach((live: string) => {
+          resultado += `- 📺 ${live}\n`;
+        });
+        resultado += `\n`;
+      }
+
+      if (ac.promocoes.length > 0) {
+        resultado += `### 🎁 Promoções Ativas\n`;
+        ac.promocoes.forEach((promo: string) => {
+          resultado += `- 🔥 ${promo}\n`;
+        });
+        resultado += `\n`;
+      }
+
+      resultado += `### 🎯 Próximos Passos\n`;
+      resultado += `1. Inscreva-se na aceleração\n`;
+      resultado += `2. Configure seu ambiente de desenvolvimento\n`;
+      resultado += `3. Participe das lives ao vivo\n`;
+      resultado += `4. Complete os desafios de código (use \`gerar_desafio\`)\n`;
+      resultado += `5. Obtenha seu certificado (use \`gerar_certificado\`)\n\n`;
+
+      if (index < aceleracoesEncontradas.length - 1) {
+        resultado += `---\n\n`;
+      }
+    });
+
+    return resultado;
+  } catch (error) {
+    return `❌ Erro ao buscar acelerações: ${error instanceof Error ? error.message : 'Erro desconhecido'}`;
   }
 }
 
