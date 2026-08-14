@@ -13,7 +13,7 @@ Este projeto integra:
 
 ## ⚡ Comandos Slash Disponíveis
 
-Este projeto possui **3 comandos slash personalizados** que você pode usar diretamente no chat do Bob!
+Este projeto possui **4 comandos slash personalizados** que você pode usar diretamente no chat do Bob!
 
 ### 1️⃣ `/trilha <tecnologia>`
 Exibe o plano de estudos completo de uma trilha da DIO.
@@ -24,7 +24,17 @@ Exibe o plano de estudos completo de uma trilha da DIO.
 /trilha React
 ```
 
-### 2️⃣ `/desafio <tecnologia> [nivel]`
+### 2️⃣ `/aceleracao [tecnologia]`
+Lista as acelerações AI Powered disponíveis na DIO, com filtro opcional por tecnologia.
+
+```bash
+/aceleracao
+/aceleracao Python
+/aceleracao React
+/aceleracao AWS
+```
+
+### 3️⃣ `/desafio <tecnologia> [nivel]`
 Gera um desafio de código aleatório baseado na tecnologia e nível.
 
 ```bash
@@ -35,7 +45,7 @@ Gera um desafio de código aleatório baseado na tecnologia e nível.
 
 **Níveis disponíveis:** Básico, Intermediário, Avançado
 
-### 3️⃣ `/certificado "<nome>" "<tecnologia>"`
+### 4️⃣ `/certificado "<nome>" "<tecnologia>"`
 Gera um certificado fictício de conclusão em formato Markdown.
 
 ```bash
@@ -72,6 +82,7 @@ projeto_final_dio_formacao_bob/
 │       ├── commands/                        # Implementação dos comandos
 │       │   ├── index.ts                     # Processador principal
 │       │   ├── trilha.ts                    # Comando /trilha
+│       │   ├── aceleracao.ts                # Comando /aceleracao
 │       │   ├── desafio.ts                   # Comando /desafio
 │       │   └── certificado.ts               # Comando /certificado
 │       ├── data/
@@ -179,6 +190,14 @@ Gerará um certificado com:
 - ✅ Lives ao vivo programadas
 - ✅ Promoções ativas
 
+### Comando `/aceleracao`
+- ✅ Listagem de todas as acelerações AI Powered
+- ✅ Filtro opcional por tecnologia
+- ✅ Informações de módulos e XP total
+- ✅ Badges disponíveis por aceleração
+- ✅ Lives ao vivo programadas
+- ✅ Promoções ativas e acesso vitalício
+
 ### Comando `/desafio`
 - ✅ Desafios específicos por tecnologia
 - ✅ 3 níveis de dificuldade
@@ -200,16 +219,21 @@ Gerará um certificado com:
 1. **Busca Flexível:** O comando `/trilha` aceita variações
    - `/trilha Python` ou `/trilha Data Science`
 
-2. **Nível Opcional:** No `/desafio`, o nível é opcional
+2. **Acelerações:** O comando `/aceleracao` é opcional quanto ao filtro
+   - `/aceleracao` (todas as acelerações)
+   - `/aceleracao Python` (apenas Python)
+
+3. **Nível Opcional:** No `/desafio`, o nível é opcional
    - `/desafio Python` (qualquer nível)
    - `/desafio Python Básico` (apenas básico)
 
-3. **Aspas Obrigatórias:** No `/certificado`, use aspas duplas
+4. **Aspas Obrigatórias:** No `/certificado`, use aspas duplas
    - ✅ `/certificado "João Silva" "Python"`
    - ❌ `/certificado João Silva Python`
 
-4. **Case Insensitive:** Comandos não diferenciam maiúsculas
+5. **Case Insensitive:** Comandos não diferenciam maiúsculas
    - `/trilha python` = `/trilha Python`
+   - `/aceleracao aws` = `/aceleracao AWS`
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -241,6 +265,6 @@ MIT License - Projeto educacional da Digital Innovation One
 
 **Desenvolvido com ❤️ para o Projeto Final da Formação IBM com Bob - DIO**
 
-🚀 **Comece agora! Digite `/trilha Python` no chat do Bob!** 🚀
+🚀 **Comece agora! Digite `/aceleracao` ou `/trilha Python` no chat do Bob!** 🚀
 
 </div>
