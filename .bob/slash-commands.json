@@ -17,6 +17,22 @@
       }
     },
     {
+      "name": "aceleracao",
+      "description": "Lista as acelerações AI Powered disponíveis na DIO, com filtro opcional por tecnologia",
+      "usage": "/aceleracao [tecnologia]",
+      "examples": [
+        "/aceleracao",
+        "/aceleracao Python",
+        "/aceleracao React",
+        "/aceleracao AWS"
+      ],
+      "handler": {
+        "type": "node",
+        "script": "projeto_final_dio_formacao_bob/dio_explorer/commands/index.ts",
+        "function": "processarComando"
+      }
+    },
+    {
       "name": "desafio",
       "description": "Gera um desafio de código aleatório baseado na tecnologia e nível escolhidos",
       "usage": "/desafio <tecnologia> [nivel]",

@@ -4,6 +4,128 @@ Este documento mostra exemplos reais de saída de cada comando do DIO Explorer.
 
 ---
 
+## ⚡ Comando `/aceleracao`
+
+### Exemplo 1: `/aceleracao` (listar todas)
+
+```markdown
+# ⚡ Acelerações DIO - AI Powered
+
+📚 **12 aceleração(ões) encontrada(s)**
+
+---
+
+## 1. Aceleração Global - Java AI Powered
+
+### 📊 Informações Gerais
+- **Tecnologia:** Java
+- **Nível:** Intermediário
+- **Módulos:** 6
+- **XP Total:** 8.000 pontos
+- **Acesso Vitalício:** ❌ Não
+
+### 🏆 Badges Disponíveis
+- 🎖️ Java com IA
+- 🎖️ Spring AI
+- 🎖️ LLM Integration
+
+### 🎥 Lives ao Vivo
+- 📺 Java + OpenAI
+- 📺 Criando Assistentes com Java
+
+---
+
+## 2. Aceleração Global - Python AI Powered
+
+### 📊 Informações Gerais
+- **Tecnologia:** Python
+- **Nível:** Intermediário
+- **Módulos:** 6
+- **XP Total:** 8.000 pontos
+- **Acesso Vitalício:** ❌ Não
+
+### 🏆 Badges Disponíveis
+- 🎖️ Python com IA
+- 🎖️ LangChain
+- 🎖️ Prompt Engineering
+
+### 🎥 Lives ao Vivo
+- 📺 Python + OpenAI
+- 📺 Agentes de IA com LangChain
+
+... (demais acelerações omitidas para brevidade)
+```
+
+---
+
+### Exemplo 2: `/aceleracao React`
+
+```markdown
+# ⚡ Acelerações DIO - AI Powered
+
+🔍 **Filtro aplicado: React**
+📚 **1 aceleração(ões) encontrada(s)**
+
+---
+
+## 1. Aceleração Global - React AI Powered
+
+### 📊 Informações Gerais
+- **Tecnologia:** React
+- **Nível:** Intermediário
+- **Módulos:** 5
+- **XP Total:** 7.000 pontos
+- **Acesso Vitalício:** ❌ Não
+
+### 🏆 Badges Disponíveis
+- 🎖️ React com IA
+- 🎖️ Next.js + LLM
+- 🎖️ AI Components
+
+### 🎥 Lives ao Vivo
+- 📺 React + Vercel AI SDK
+- 📺 Chatbots com React
+
+### 🎯 Próximos Passos
+1. Inscreva-se na aceleração
+2. Prepare seu ambiente com Node.js e React
+3. Participe das lives ao vivo
+4. Complete os desafios de código (use `/desafio`)
+```
+
+---
+
+### Exemplo 3: `/aceleracao AWS`
+
+```markdown
+# ⚡ Acelerações DIO - AI Powered
+
+🔍 **Filtro aplicado: AWS**
+📚 **1 aceleração(ões) encontrada(s)**
+
+---
+
+## 1. Aceleração Global - Cloud AWS AI Powered
+
+### 📊 Informações Gerais
+- **Tecnologia:** AWS
+- **Nível:** Avançado
+- **Módulos:** 6
+- **XP Total:** 9.000 pontos
+- **Acesso Vitalício:** ❌ Não
+
+### 🏆 Badges Disponíveis
+- 🎖️ AWS Bedrock
+- 🎖️ SageMaker
+- 🎖️ Generative AI on AWS
+
+### 🎥 Lives ao Vivo
+- 📺 AWS Bedrock na Prática
+- 📺 MLOps na AWS
+```
+
+---
+
 ## 📚 Comando `/trilha`
 
 ### Exemplo 1: `/trilha Python`
@@ -397,6 +519,20 @@ Sistema de comandos slash para interação com a plataforma DIO.
 
 ---
 
+## /aceleracao
+
+**Descrição:** Lista as acelerações AI Powered disponíveis na DIO, com filtro opcional por tecnologia
+
+**Uso:** `/aceleracao [tecnologia]`
+
+**Exemplos:**
+- `/aceleracao`
+- `/aceleracao Python`
+- `/aceleracao React`
+- `/aceleracao AWS`
+
+---
+
 ## /desafio
 
 **Descrição:** Gera um desafio de código aleatório baseado na tecnologia e nível escolhidos
@@ -429,6 +565,7 @@ Sistema de comandos slash para interação com a plataforma DIO.
 - Use aspas duplas para argumentos com espaços
 - Os comandos não são case-sensitive
 - Você pode usar `/help` a qualquer momento
+- Use `/aceleracao` para descobrir as acelerações AI Powered antes de uma trilha completa
 
 ---
 
@@ -453,6 +590,14 @@ Use `/help` para ver os comandos disponíveis.
 ❌ Nenhuma trilha encontrada para a tecnologia: **TecnologiaInexistente**
 
 💡 Tecnologias disponíveis: Python, Java, JavaScript, React, Angular, Node.js, DevOps, AWS, Azure, Kotlin, Swift, Flutter, Go, Rust, PHP, Ruby, C#, Vue.js, Unity, Blockchain, e mais!
+```
+
+### Aceleração não encontrada para a tecnologia
+
+```markdown
+❌ Nenhuma aceleração encontrada para a tecnologia: **TecnologiaInexistente**
+
+💡 Use `/aceleracao` sem parâmetros para ver todas as acelerações disponíveis.
 ```
 
 ### Parâmetros faltando

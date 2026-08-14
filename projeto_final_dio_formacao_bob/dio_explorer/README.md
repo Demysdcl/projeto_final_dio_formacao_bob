@@ -15,6 +15,7 @@ Sistema de comandos interativos para explorar trilhas, desafios e certificados d
 
 O DIO Explorer é um sistema de comandos slash que permite:
 - 📚 Visualizar planos de estudo detalhados de trilhas
+- ⚡ Explorar acelerações AI Powered disponíveis na DIO
 - 🎯 Gerar desafios de código personalizados
 - 🎓 Criar certificados de conclusão em Markdown
 
@@ -41,6 +42,31 @@ Exibe um plano de estudos completo e formatado para uma tecnologia específica.
 /trilha JavaScript
 /trilha React
 /trilha DevOps
+```
+
+---
+
+### `/aceleracao [tecnologia]`
+
+Exibe as acelerações disponíveis na DIO, filtradas opcionalmente por tecnologia.
+
+**Parâmetros:**
+- `tecnologia` (opcional): Nome da tecnologia ou stack para filtrar
+
+**Retorna:**
+- Lista de acelerações disponíveis
+- Informações gerais (módulos, XP, nível)
+- Badges disponíveis
+- Lives ao vivo
+- Indicação de acesso vitalício
+
+**Exemplos:**
+```bash
+/aceleracao
+/aceleracao Python
+/aceleracao Java
+/aceleracao React
+/aceleracao AWS
 ```
 
 ---
@@ -97,7 +123,7 @@ Gera um certificado fictício de conclusão em formato Markdown.
 
 ### `/help`
 
-Exibe a lista completa de comandos disponíveis com descrições e exemplos.
+Exibe a lista completa de comandos disponíveis com descrições e exemplos, incluindo o novo comando `/aceleracao`.
 
 ## 📦 Instalação
 
@@ -144,6 +170,33 @@ const certificado = executarComandoCertificado('João Silva', 'Python');
 ```
 
 ## 📚 Exemplos
+
+### Exemplo 0: Listar Acelerações AI Powered
+
+```typescript
+const resultado = processarComando('/aceleracao');
+```
+
+**Saída:**
+```markdown
+# ⚡ Acelerações DIO - AI Powered
+
+📚 **12 aceleração(ões) encontrada(s)**
+
+---
+
+## 1. Aceleração Global - Python AI Powered
+
+### 📊 Informações Gerais
+- **Tecnologia:** Python
+- **Nível:** Intermediário
+- **Módulos:** 6
+- **XP Total:** 8.000 pontos
+- **Acesso Vitalício:** ❌ Não
+...
+```
+
+---
 
 ### Exemplo 1: Explorar Trilha de Python
 
@@ -213,10 +266,11 @@ dio_explorer/
 ├── commands/
 │   ├── index.ts          # Arquivo principal com registro de comandos
 │   ├── trilha.ts         # Comando /trilha
+│   ├── aceleracao.ts     # Comando /aceleracao
 │   ├── desafio.ts        # Comando /desafio
 │   └── certificado.ts    # Comando /certificado
 ├── data/
-│   └── trilhas_dio.json  # Base de dados das trilhas
+│   └── trilhas_dio.json  # Base de dados das trilhas e acelerações
 ├── docs/
 │   └── certificados-emitidos/  # Certificados gerados
 └── README.md             # Este arquivo
@@ -232,7 +286,31 @@ O sistema suporta as seguintes tecnologias:
 - **Especialidades:** Data Science, Machine Learning, Blockchain, Cybersecurity, QA, UX/UI Design
 - **Gestão:** Product Manager, Scrum Master, Arquitetura de Software
 
+### ⚡ Tecnologias com Aceleração AI Powered
+
+| Aceleração | Tecnologia | Nível |
+|---|---|---|
+| Aceleração Global - Java AI Powered | Java | Intermediário |
+| Aceleração Global - Python AI Powered | Python | Intermediário |
+| Aceleração Global - Angular AI Powered | Angular | Intermediário |
+| Aceleração Global - React AI Powered | React | Intermediário |
+| Aceleração Global - Node.js AI Powered | Node.js | Intermediário |
+| Aceleração Global - .NET AI Powered | C# | Intermediário |
+| Aceleração Global - Cloud AWS AI Powered | AWS | Avançado |
+| Aceleração Global - Cloud Azure AI Powered | Azure | Avançado |
+| Aceleração Global - DevOps AI Powered | DevOps | Avançado |
+| Aceleração Global - Data Science AI Powered | Python | Avançado |
+| Aceleração Global - Mobile Android AI Powered | Kotlin | Intermediário |
+| Aceleração Global - UX/UI AI Powered | Design | Básico |
+
 ## 🔧 Funcionalidades
+
+### Comando `/aceleracao`
+- ✅ Listagem de todas as acelerações disponíveis
+- ✅ Filtro opcional por tecnologia
+- ✅ Informações detalhadas (módulos, XP, nível)
+- ✅ Badges e conquistas disponíveis
+- ✅ Lives ao vivo das acelerações
 
 ### Comando `/trilha`
 - ✅ Busca por tecnologia ou nome da trilha
@@ -262,14 +340,15 @@ O sistema suporta as seguintes tecnologias:
 
 - Os certificados são fictícios e gerados para fins educacionais
 - Os desafios são exemplos e podem não refletir desafios reais da plataforma DIO
-- As trilhas são baseadas em dados simulados
+- As trilhas e acelerações são baseadas em dados simulados inspirados no catálogo público da DIO
+- As acelerações possuem acesso temporário (`vitalicio: false`), diferente das trilhas
 
 ## 🤝 Contribuindo
 
 Contribuições são bem-vindas! Sinta-se à vontade para:
 - Adicionar novos comandos
 - Melhorar os desafios existentes
-- Adicionar mais tecnologias
+- Adicionar mais tecnologias ou acelerações
 - Corrigir bugs
 - Melhorar a documentação
 

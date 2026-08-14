@@ -10,7 +10,38 @@ Copie e cole cada comando abaixo diretamente no chat do Bob (um de cada vez):
 
 ---
 
-## 📝 Demonstração 1: Explorar Trilha de Python
+## ⚡ Demonstração 1: Listar Acelerações AI Powered
+
+**Cole este comando no chat:**
+```
+/aceleracao
+```
+
+**O que você verá:**
+- ✅ Lista das 12 acelerações AI Powered disponíveis
+- ✅ Informações de cada aceleração (módulos, XP, nível)
+- ✅ Badges disponíveis por aceleração
+- ✅ Lives ao vivo de cada aceleração
+- ✅ Indicação de acesso temporário (não vitalício)
+
+---
+
+## ⚡ Demonstração 2: Filtrar Aceleração por Tecnologia
+
+**Cole este comando no chat:**
+```
+/aceleracao Python
+```
+
+**O que você verá:**
+- ✅ Aceleração Global - Python AI Powered
+- ✅ 6 módulos, 8.000 XP
+- ✅ Badges: Python com IA, LangChain, Prompt Engineering
+- ✅ Lives: Python + OpenAI, Agentes de IA com LangChain
+
+---
+
+## 📝 Demonstração 3: Explorar Trilha de Python
 
 **Cole este comando no chat:**
 ```
@@ -26,7 +57,7 @@ Copie e cole cada comando abaixo diretamente no chat do Bob (um de cada vez):
 
 ---
 
-## 🎯 Demonstração 2: Gerar Desafio de JavaScript
+## 🎯 Demonstração 4: Gerar Desafio de JavaScript
 
 **Cole este comando no chat:**
 ```
@@ -43,7 +74,7 @@ Copie e cole cada comando abaixo diretamente no chat do Bob (um de cada vez):
 
 ---
 
-## 🎓 Demonstração 3: Gerar Certificado
+## 🎓 Demonstração 5: Gerar Certificado
 
 **Cole este comando no chat (substitua "Seu Nome" pelo seu nome real):**
 ```
@@ -64,7 +95,7 @@ projeto_final_dio_formacao_bob/dio_explorer/docs/certificados-emitidos/
 
 ---
 
-## 🔍 Demonstração 4: Ver Todos os Comandos
+## 🔍 Demonstração 6: Ver Todos os Comandos
 
 **Cole este comando no chat:**
 ```
@@ -79,7 +110,7 @@ projeto_final_dio_formacao_bob/dio_explorer/docs/certificados-emitidos/
 
 ---
 
-## 🌟 Demonstração 5: Explorar Outras Tecnologias
+## 🌟 Demonstração 7: Explorar Outras Tecnologias
 
 ### React
 ```
@@ -103,7 +134,26 @@ projeto_final_dio_formacao_bob/dio_explorer/docs/certificados-emitidos/
 
 ---
 
-## 🎯 Demonstração 6: Desafios de Diferentes Níveis
+## ⚡ Demonstração 8: Acelerações de Diferentes Tecnologias
+
+### Cloud AWS
+```
+/aceleracao AWS
+```
+
+### Angular com IA
+```
+/aceleracao Angular
+```
+
+### Data Science com IA
+```
+/aceleracao Data Science
+```
+
+---
+
+## 🎯 Demonstração 9: Desafios de Diferentes Níveis
 
 ### Desafio Básico de Python
 ```
@@ -122,7 +172,7 @@ projeto_final_dio_formacao_bob/dio_explorer/docs/certificados-emitidos/
 
 ---
 
-## 🎓 Demonstração 7: Gerar Múltiplos Certificados
+## 🎓 Demonstração 10: Gerar Múltiplos Certificados
 
 ### Certificado de JavaScript
 ```
@@ -161,13 +211,15 @@ Execute esta sequência para testar todos os comandos:
 
 ```
 1. /help
-2. /trilha Python
-3. /desafio Python Básico
-4. /certificado "Seu Nome" "Python"
-5. /trilha JavaScript
-6. /desafio JavaScript Intermediário
-7. /trilha React
-8. /desafio React Avançado
+2. /aceleracao
+3. /aceleracao React
+4. /trilha Python
+5. /desafio Python Básico
+6. /certificado "Seu Nome" "Python"
+7. /trilha JavaScript
+8. /desafio JavaScript Intermediário
+9. /trilha React
+10. /desafio React Avançado
 ```
 
 ---
@@ -276,6 +328,8 @@ Aspas são obrigatórias! ⚠️
 Marque conforme você testa:
 
 - [ ] Testei `/help`
+- [ ] Testei `/aceleracao` sem parâmetro (lista todas)
+- [ ] Testei `/aceleracao <tecnologia>` com filtro
 - [ ] Testei `/trilha` com pelo menos 3 tecnologias
 - [ ] Testei `/desafio` nos 3 níveis (Básico, Intermediário, Avançado)
 - [ ] Testei `/certificado` e verifiquei o arquivo gerado
@@ -291,11 +345,12 @@ Marque conforme você testa:
 Se você completou todos os testes, agora você é um expert em usar os comandos slash do DIO Explorer!
 
 ### Próximos Passos:
-1. ✅ Explore mais tecnologias
-2. ✅ Complete os desafios propostos
-3. ✅ Gere certificados para suas conquistas
-4. ✅ Compartilhe seus certificados nas redes sociais
-5. ✅ Continue aprendendo e evoluindo!
+1. ✅ Explore as acelerações AI Powered com `/aceleracao`
+2. ✅ Explore mais tecnologias com `/trilha`
+3. ✅ Complete os desafios propostos
+4. ✅ Gere certificados para suas conquistas
+5. ✅ Compartilhe seus certificados nas redes sociais
+6. ✅ Continue aprendendo e evoluindo!
 
 ---
 

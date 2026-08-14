@@ -1,16 +1,18 @@
 /**
  * DIO Explorer - Sistema de Comandos Slash
- * 
+ *
  * Este módulo centraliza todos os comandos slash disponíveis para interação
  * com a plataforma DIO (Digital Innovation One).
- * 
+ *
  * Comandos disponíveis:
  * - /trilha <tecnologia> - Exibe plano de estudos formatado
+ * - /aceleracao [tecnologia] - Lista acelerações AI Powered
  * - /desafio <tecnologia> [nivel] - Gera desafio de código aleatório
  * - /certificado <nome> <tecnologia> - Gera certificado de conclusão
  */
 
 import { executarComandoTrilha } from './trilha';
+import { executarComandoAceleracao } from './aceleracao';
 import { executarComandoDesafio } from './desafio';
 import { executarComandoCertificado } from './certificado';
 
@@ -46,6 +48,21 @@ export const slashCommands: Record<string, SlashCommand> = {
                '**Exemplo:** `/trilha Python`';
       }
       return executarComandoTrilha(tecnologia);
+    }
+  },
+
+  aceleracao: {
+    name: 'aceleracao',
+    description: 'Lista as acelerações AI Powered disponíveis na DIO, com filtro opcional por tecnologia',
+    usage: '/aceleracao [tecnologia]',
+    examples: [
+      '/aceleracao',
+      '/aceleracao Python',
+      '/aceleracao React',
+      '/aceleracao AWS'
+    ],
+    handler: (tecnologia?: string) => {
+      return executarComandoAceleracao(tecnologia);
     }
   },
 
@@ -193,6 +210,7 @@ function gerarMensagemHelp(): string {
  */
 export {
   executarComandoTrilha,
+  executarComandoAceleracao,
   executarComandoDesafio,
   executarComandoCertificado
 };

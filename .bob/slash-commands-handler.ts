@@ -38,7 +38,7 @@ export async function executarSlashCommand(comando: string): Promise<string> {
   try {
     // Validar que o comando começa com /
     if (!comando.startsWith('/')) {
-      return '❌ Comandos devem começar com `/`\n\nComandos disponíveis:\n- `/trilha <tecnologia>`\n- `/desafio <tecnologia> [nivel]`\n- `/certificado "<nome>" "<tecnologia>"`';
+      return '❌ Comandos devem começar com `/`\n\nComandos disponíveis:\n- `/trilha <tecnologia>`\n- `/aceleracao [tecnologia]`\n- `/desafio <tecnologia> [nivel]`\n- `/certificado "<nome>" "<tecnologia>"`';
     }
 
     // Carregar o processador de comandos
@@ -68,6 +68,17 @@ Exibe o plano de estudos detalhado de uma trilha/tecnologia da DIO.
 - \`/trilha Python\`
 - \`/trilha JavaScript\`
 - \`/trilha React\`
+
+---
+
+## /aceleracao [tecnologia]
+Lista as acelerações AI Powered disponíveis na DIO, com filtro opcional por tecnologia.
+
+**Exemplos:**
+- \`/aceleracao\`
+- \`/aceleracao Python\`
+- \`/aceleracao React\`
+- \`/aceleracao AWS\`
 
 ---
 

@@ -30,20 +30,25 @@ mcp/
 - **Entrada:** Nome da tecnologia (ex: "Python", "Java", "React")
 - **Saída:** Plano de estudos completo com módulos, XP, badges, lives e fases
 
-### 2. gerar_desafio
+### 2. buscar_aceleracao
+- **Função:** Lista acelerações AI Powered disponíveis, com filtro opcional por tecnologia
+- **Entrada:** Tecnologia (opcional, ex: "Python", "React", "AWS")
+- **Saída:** Lista de acelerações com módulos, XP, badges e lives
+
+### 3. gerar_desafio
 - **Função:** Gera desafios de código aleatórios
 - **Entrada:** Tecnologia e nível (Básico/Intermediário/Avançado)
 - **Saída:** Desafio com descrição, requisitos, dicas e exemplos
 
-### 3. gerar_certificado
+### 4. gerar_certificado
 - **Função:** Emite certificados de conclusão em Markdown
 - **Entrada:** Nome do aluno e tecnologia
 - **Saída:** Certificado formatado e salvo em arquivo
 
-### 4. listar_tecnologias
+### 5. listar_tecnologias
 - **Função:** Lista todas as tecnologias disponíveis
 - **Entrada:** Nenhuma
-- **Saída:** Lista de 20+ tecnologias disponíveis
+- **Saída:** Lista de 20+ tecnologias disponíveis (trilhas + acelerações)
 
 ## 🔧 Tecnologias Utilizadas
 
@@ -112,10 +117,12 @@ Bob: [executa buscar_trilha] → Retorna plano completo
 
 ## 📊 Estatísticas
 
-- **Total de arquivos criados:** 12
-- **Linhas de código TypeScript:** ~740
-- **Linhas de documentação:** ~650
-- **Ferramentas MCP:** 4
+- **Total de arquivos criados:** 13
+- **Linhas de código TypeScript:** ~820
+- **Linhas de documentação:** ~850
+- **Ferramentas MCP:** 5
+- **Trilhas suportadas:** 32
+- **Acelerações suportadas:** 12
 - **Tecnologias suportadas:** 20+
 - **Tempo de build:** ~5 segundos
 - **Tamanho do pacote:** ~126 dependências
@@ -129,25 +136,36 @@ Bob: [executa buscar_trilha] → Retorna plano completo
 → Recebe plano de estudos completo
 ```
 
-### 2. Desenvolvedor Praticando
+### 2. Descoberta de Acelerações AI Powered
+```
+"Quais acelerações de IA estão disponíveis na DIO?"
+→ buscar_aceleracao()
+→ Lista todas as 12 acelerações AI Powered
+
+"Existe aceleração de React com IA?"
+→ buscar_aceleracao("React")
+→ Retorna a Aceleração Global - React AI Powered
+```
+
+### 3. Desenvolvedor Praticando
 ```
 "Me dê um desafio de JavaScript intermediário"
 → gerar_desafio("JavaScript", "Intermediário")
 → Recebe desafio com requisitos e dicas
 ```
 
-### 3. Conclusão de Curso
+### 4. Conclusão de Curso
 ```
 "Gere meu certificado de Java - João Silva"
 → gerar_certificado("João Silva", "Java")
 → Certificado gerado e salvo
 ```
 
-### 4. Exploração de Opções
+### 5. Exploração de Opções
 ```
 "Quais tecnologias posso aprender?"
 → listar_tecnologias()
-→ Lista de 20+ tecnologias
+→ Lista de 20+ tecnologias (trilhas + acelerações)
 ```
 
 ## 🔐 Segurança

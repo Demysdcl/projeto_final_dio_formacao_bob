@@ -86,6 +86,7 @@ Você deve ver a mensagem:
 DIO Explorer MCP Server iniciado com sucesso!
 Ferramentas disponíveis:
   - buscar_trilha: Busca e retorna informações detalhadas sobre uma trilha...
+  - buscar_aceleracao: Busca acelerações AI Powered, com filtro opcional por tecnologia...
   - gerar_desafio: Gera um desafio de código aleatório...
   - gerar_certificado: Gera um certificado de conclusão...
   - listar_tecnologias: Lista todas as tecnologias disponíveis...
@@ -96,6 +97,8 @@ Ferramentas disponíveis:
 1. Reinicie o Bob ou Claude Desktop
 2. Tente usar uma das ferramentas:
    - "Busque informações sobre a trilha de Python"
+   - "Liste as acelerações AI Powered disponíveis"
+   - "Existe aceleração de React com IA?"
    - "Liste todas as tecnologias disponíveis"
    - "Gere um desafio de JavaScript nível intermediário"
 

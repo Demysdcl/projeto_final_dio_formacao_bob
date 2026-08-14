@@ -7,6 +7,7 @@ Servidor MCP (Model Context Protocol) para acesso às funcionalidades do DIO Exp
 Este servidor MCP permite que aplicações e agentes de IA acessem as funcionalidades do DIO Explorer de forma programática, incluindo:
 
 - 🎯 Busca de trilhas de aprendizado
+- ⚡ Busca de acelerações AI Powered
 - 💻 Geração de desafios de código
 - 🎓 Emissão de certificados
 - 📚 Listagem de tecnologias disponíveis
@@ -91,7 +92,32 @@ Busca informações detalhadas sobre uma trilha de aprendizado.
 }
 ```
 
-### 2. `gerar_desafio`
+### 2. `buscar_aceleracao`
+
+Busca acelerações AI Powered disponíveis, com filtro opcional por tecnologia.
+
+**Parâmetros:**
+- `tecnologia` (string, opcional): Tecnologia para filtrar (ex: "Python", "React", "AWS"). Omita para listar todas.
+
+**Exemplo:**
+```json
+{
+  "name": "buscar_aceleracao",
+  "arguments": {
+    "tecnologia": "React"
+  }
+}
+```
+
+**Exemplo (listar todas):**
+```json
+{
+  "name": "buscar_aceleracao",
+  "arguments": {}
+}
+```
+
+### 3. `gerar_desafio`
 
 Gera um desafio de código aleatório.
 
@@ -110,7 +136,7 @@ Gera um desafio de código aleatório.
 }
 ```
 
-### 3. `gerar_certificado`
+### 4. `gerar_certificado`
 
 Gera um certificado de conclusão em formato Markdown.
 
@@ -129,7 +155,7 @@ Gera um certificado de conclusão em formato Markdown.
 }
 ```
 
-### 4. `listar_tecnologias`
+### 5. `listar_tecnologias`
 
 Lista todas as tecnologias disponíveis.
 

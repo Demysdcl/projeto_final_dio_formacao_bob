@@ -384,5 +384,151 @@
       "vitalicio": true,
       "livesAoVivo": ["SLOs e SLIs", "Chaos Engineering", "On-Call Best Practices"]
     }
+  ],
+  "aceleracoes": [
+    {
+      "id": 1,
+      "nome": "Aceleração Global - Java AI Powered",
+      "tecnologia": "Java",
+      "nivel": "Intermediário",
+      "numeroModulos": 6,
+      "xpTotal": 8000,
+      "badgesDisponiveis": ["Java com IA", "Spring AI", "LLM Integration"],
+      "promocoes": [],
+      "vitalicio": false,
+      "livesAoVivo": ["Java + OpenAI", "Criando Assistentes com Java"]
+    },
+    {
+      "id": 2,
+      "nome": "Aceleração Global - Python AI Powered",
+      "tecnologia": "Python",
+      "nivel": "Intermediário",
+      "numeroModulos": 6,
+      "xpTotal": 8000,
+      "badgesDisponiveis": ["Python com IA", "LangChain", "Prompt Engineering"],
+      "promocoes": [],
+      "vitalicio": false,
+      "livesAoVivo": ["Python + OpenAI", "Agentes de IA com LangChain"]
+    },
+    {
+      "id": 3,
+      "nome": "Aceleração Global - Angular AI Powered",
+      "tecnologia": "Angular",
+      "nivel": "Intermediário",
+      "numeroModulos": 5,
+      "xpTotal": 7000,
+      "badgesDisponiveis": ["Angular com IA", "TypeScript + LLM", "Copilot no Frontend"],
+      "promocoes": [],
+      "vitalicio": false,
+      "livesAoVivo": ["Angular + GitHub Copilot", "Interfaces Inteligentes"]
+    },
+    {
+      "id": 4,
+      "nome": "Aceleração Global - React AI Powered",
+      "tecnologia": "React",
+      "nivel": "Intermediário",
+      "numeroModulos": 5,
+      "xpTotal": 7000,
+      "badgesDisponiveis": ["React com IA", "Next.js + LLM", "AI Components"],
+      "promocoes": [],
+      "vitalicio": false,
+      "livesAoVivo": ["React + Vercel AI SDK", "Chatbots com React"]
+    },
+    {
+      "id": 5,
+      "nome": "Aceleração Global - Node.js AI Powered",
+      "tecnologia": "Node.js",
+      "nivel": "Intermediário",
+      "numeroModulos": 5,
+      "xpTotal": 7500,
+      "badgesDisponiveis": ["Node.js com IA", "APIs Inteligentes", "LLM no Backend"],
+      "promocoes": [],
+      "vitalicio": false,
+      "livesAoVivo": ["Node.js + OpenAI API", "Microserviços com IA"]
+    },
+    {
+      "id": 6,
+      "nome": "Aceleração Global - .NET AI Powered",
+      "tecnologia": "C#",
+      "nivel": "Intermediário",
+      "numeroModulos": 5,
+      "xpTotal": 7500,
+      "badgesDisponiveis": [".NET com IA", "Semantic Kernel", "Azure OpenAI"],
+      "promocoes": [],
+      "vitalicio": false,
+      "livesAoVivo": [".NET + Azure AI", "Semantic Kernel na Prática"]
+    },
+    {
+      "id": 7,
+      "nome": "Aceleração Global - Cloud AWS AI Powered",
+      "tecnologia": "AWS",
+      "nivel": "Avançado",
+      "numeroModulos": 6,
+      "xpTotal": 9000,
+      "badgesDisponiveis": ["AWS Bedrock", "SageMaker", "Generative AI on AWS"],
+      "promocoes": [],
+      "vitalicio": false,
+      "livesAoVivo": ["AWS Bedrock na Prática", "MLOps na AWS"]
+    },
+    {
+      "id": 8,
+      "nome": "Aceleração Global - Cloud Azure AI Powered",
+      "tecnologia": "Azure",
+      "nivel": "Avançado",
+      "numeroModulos": 6,
+      "xpTotal": 9000,
+      "badgesDisponiveis": ["Azure OpenAI Service", "Cognitive Services", "Copilot Studio"],
+      "promocoes": [],
+      "vitalicio": false,
+      "livesAoVivo": ["Azure AI Fundamentals", "Criando Copilots com Azure"]
+    },
+    {
+      "id": 9,
+      "nome": "Aceleração Global - DevOps AI Powered",
+      "tecnologia": "DevOps",
+      "nivel": "Avançado",
+      "numeroModulos": 5,
+      "xpTotal": 8500,
+      "badgesDisponiveis": ["AIOps", "GitHub Copilot para DevOps", "Pipelines Inteligentes"],
+      "promocoes": [],
+      "vitalicio": false,
+      "livesAoVivo": ["IA no Pipeline CI/CD", "GitHub Copilot Avançado"]
+    },
+    {
+      "id": 10,
+      "nome": "Aceleração Global - Data Science AI Powered",
+      "tecnologia": "Python",
+      "nivel": "Avançado",
+      "numeroModulos": 7,
+      "xpTotal": 10000,
+      "badgesDisponiveis": ["Generative AI para Data Science", "AutoML", "LLM Fine-tuning"],
+      "promocoes": [],
+      "vitalicio": false,
+      "livesAoVivo": ["Fine-tuning de LLMs", "AutoML na Prática", "RAG com Python"]
+    },
+    {
+      "id": 11,
+      "nome": "Aceleração Global - Mobile Android AI Powered",
+      "tecnologia": "Kotlin",
+      "nivel": "Intermediário",
+      "numeroModulos": 5,
+      "xpTotal": 7000,
+      "badgesDisponiveis": ["Android + Gemini", "ML Kit", "On-Device AI"],
+      "promocoes": [],
+      "vitalicio": false,
+      "livesAoVivo": ["Gemini API no Android", "ML Kit na Prática"]
+    },
+    {
+      "id": 12,
+      "nome": "Aceleração Global - UX/UI AI Powered",
+      "tecnologia": "Design",
+      "nivel": "Básico",
+      "numeroModulos": 4,
+      "xpTotal": 5500,
+      "badgesDisponiveis": ["Design com IA", "Figma + AI Plugins", "Geração de Interfaces com IA"],
+      "promocoes": [],
+      "vitalicio": false,
+      "livesAoVivo": ["Figma AI", "Prototipagem Assistida por IA"]
+    }
   ]
 }

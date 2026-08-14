@@ -142,12 +142,22 @@ Usuário: "Liste todas as tecnologias disponíveis na DIO"
 Usuário: "Busque informações sobre a trilha de Python"
 ```
 
-**Exemplo 3: Gerar desafio**
+**Exemplo 3: Listar acelerações**
+```
+Usuário: "Quais acelerações AI Powered estão disponíveis?"
+```
+
+**Exemplo 4: Buscar aceleração por tecnologia**
+```
+Usuário: "Existe aceleração de React com IA na DIO?"
+```
+
+**Exemplo 5: Gerar desafio**
 ```
 Usuário: "Gere um desafio de JavaScript nível intermediário"
 ```
 
-**Exemplo 4: Gerar certificado**
+**Exemplo 6: Gerar certificado**
 ```
 Usuário: "Gere um certificado para João Silva na trilha de Java"
 ```
@@ -211,6 +221,25 @@ Usuário: "Completei! Gere meu certificado. Meu nome é Maria Silva"
 
 Bob/Claude: [usa gerar_certificado com nome="Maria Silva", tecnologia="Python"]
 Retorna: Certificado gerado e salvo
+```
+
+### Cenário: Explorar Acelerações AI Powered
+
+```
+Usuário: "Quais acelerações de IA a DIO tem disponíveis?"
+
+Bob/Claude: [usa buscar_aceleracao sem parâmetros]
+Retorna: Lista completa das 12 acelerações AI Powered
+
+Usuário: "Me mostre a aceleração de Node.js"
+
+Bob/Claude: [usa buscar_aceleracao com tecnologia="Node.js"]
+Retorna: Aceleração Global - Node.js AI Powered com badges e lives
+
+Usuário: "E existe algo para AWS com IA?"
+
+Bob/Claude: [usa buscar_aceleracao com tecnologia="AWS"]
+Retorna: Aceleração Global - Cloud AWS AI Powered
 ```
 
 ## 🎯 Dicas de Uso

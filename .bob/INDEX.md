@@ -221,10 +221,10 @@ Guia completo de navegação para toda a documentação dos comandos slash do DI
 ## 📊 Estatísticas da Documentação
 
 - **Total de arquivos:** 10 documentos
-- **Linhas de código:** ~2.500 linhas
-- **Comandos documentados:** 3 principais + 1 help
-- **Exemplos práticos:** 20+ exemplos
-- **Tecnologias suportadas:** 32 trilhas
+- **Linhas de código:** ~2.800 linhas
+- **Comandos documentados:** 4 principais + 1 help
+- **Exemplos práticos:** 30+ exemplos
+- **Tecnologias suportadas:** 32 trilhas + 12 acelerações
 - **Tempo de leitura total:** ~4 horas
 
 ---
@@ -232,9 +232,9 @@ Guia completo de navegação para toda a documentação dos comandos slash do DI
 ## 🎯 Casos de Uso
 
 ### Caso 1: "Quero começar a usar agora!"
-**Leia:** [`COMANDOS_SLASH.md`](../COMANDOS_SLASH.md)  
-**Tempo:** 5 minutos  
-**Ação:** Digite `/trilha Python` no chat
+**Leia:** [`COMANDOS_SLASH.md`](../COMANDOS_SLASH.md)
+**Tempo:** 5 minutos
+**Ação:** Digite `/aceleracao` e depois `/trilha Python` no chat
 
 ### Caso 2: "Quero entender tudo sobre os comandos"
 **Leia:** [`.bob/SLASH_COMMANDS_README.md`](SLASH_COMMANDS_README.md)  

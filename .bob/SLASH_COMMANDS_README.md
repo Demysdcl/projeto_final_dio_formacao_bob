@@ -26,7 +26,32 @@ Exibe um plano de estudos completo e formatado para uma tecnologia específica.
 
 ---
 
-### 2️⃣ `/desafio <tecnologia> [nivel]`
+### 2️⃣ `/aceleracao [tecnologia]`
+
+Lista as acelerações AI Powered disponíveis na DIO, com filtro opcional por tecnologia.
+
+**Como usar:**
+```
+/aceleracao
+/aceleracao Python
+/aceleracao React
+/aceleracao AWS
+```
+
+**O que retorna:**
+- 📊 Informações gerais da aceleração (nível, módulos, XP)
+- 🏆 Badges disponíveis
+- 🎥 Lives ao vivo da aceleração
+- ❌ Acesso Vitalício: Não (acelerações têm duração temporária)
+- 🎯 Próximos passos
+
+**Tecnologias com Aceleração disponível:**
+- Java, Python, Angular, React, Node.js, .NET
+- AWS, Azure, DevOps, Data Science, Android (Kotlin), UX/UI
+
+---
+
+### 3️⃣ `/desafio <tecnologia> [nivel]`
 
 Gera um desafio de código aleatório baseado na tecnologia e nível escolhidos.
 
@@ -52,7 +77,7 @@ Gera um desafio de código aleatório baseado na tecnologia e nível escolhidos.
 
 ---
 
-### 3️⃣ `/certificado "<nome>" "<tecnologia>"`
+### 4️⃣ `/certificado "<nome>" "<tecnologia>"`
 
 Gera um certificado fictício de conclusão em formato Markdown.
 
@@ -83,12 +108,22 @@ Simplesmente digite o comando no chat do Bob, exatamente como mostrado nos exemp
 /trilha Python
 ```
 
-**Exemplo 2 - Gerar desafio intermediário de JavaScript:**
+**Exemplo 2 - Listar acelerações AI Powered:**
+```
+/aceleracao
+```
+
+**Exemplo 3 - Ver aceleração específica:**
+```
+/aceleracao React
+```
+
+**Exemplo 4 - Gerar desafio intermediário de JavaScript:**
 ```
 /desafio JavaScript Intermediário
 ```
 
-**Exemplo 3 - Gerar certificado:**
+**Exemplo 5 - Gerar certificado:**
 ```
 /certificado "Seu Nome Completo" "Python"
 ```
@@ -125,10 +160,11 @@ projeto_final_dio_formacao_bob/dio_explorer/
 ├── commands/
 │   ├── index.ts          # Processador principal
 │   ├── trilha.ts         # Comando /trilha
+│   ├── aceleracao.ts     # Comando /aceleracao
 │   ├── desafio.ts        # Comando /desafio
 │   └── certificado.ts    # Comando /certificado
 ├── data/
-│   └── trilhas_dio.json  # Base de dados (32 trilhas)
+│   └── trilhas_dio.json  # Base de dados (32 trilhas + 12 acelerações)
 └── docs/
     └── certificados-emitidos/  # Certificados gerados
 ```
@@ -139,32 +175,43 @@ projeto_final_dio_formacao_bob/dio_explorer/
    - `/trilha Python` encontra "Formação Python Developer"
    - `/trilha Data Science` encontra "Formação Data Science"
 
-2. **Nível Opcional:** No comando `/desafio`, o nível é opcional
+2. **Acelerações sem filtro:** `/aceleracao` sem argumento lista todas as 12 acelerações AI Powered
+   - `/aceleracao` → lista todas
+   - `/aceleracao AWS` → mostra apenas a aceleração de Cloud AWS
+
+3. **Nível Opcional:** No comando `/desafio`, o nível é opcional
    - `/desafio Python` gera um desafio aleatório de qualquer nível
    - `/desafio Python Básico` gera apenas desafios básicos
 
-3. **Aspas Obrigatórias:** No comando `/certificado`, use sempre aspas duplas
+4. **Aspas Obrigatórias:** No comando `/certificado`, use sempre aspas duplas
    - ✅ Correto: `/certificado "João Silva" "Python"`
    - ❌ Errado: `/certificado João Silva Python`
 
-4. **Case Insensitive:** Os comandos não diferenciam maiúsculas de minúsculas
+5. **Case Insensitive:** Os comandos não diferenciam maiúsculas de minúsculas
    - `/trilha python` = `/trilha Python` = `/trilha PYTHON`
+   - `/aceleracao react` = `/aceleracao React`
 
 ## 🎓 Exemplos Práticos
 
-### Cenário 1: Iniciando estudos em Python
+### Cenário 1: Descobrindo as Acelerações AI Powered
+```
+/aceleracao
+```
+Você verá as 12 acelerações disponíveis com suas tecnologias, XP e lives.
+
+### Cenário 2: Iniciando estudos em Python
 ```
 /trilha Python
 ```
 Você verá o plano completo com 12 módulos, 15.000 XP e badges disponíveis.
 
-### Cenário 2: Praticando JavaScript
+### Cenário 3: Praticando JavaScript
 ```
 /desafio JavaScript Intermediário
 ```
 Receberá um desafio como "To-Do List com LocalStorage" valendo 250 XP.
 
-### Cenário 3: Completou uma formação
+### Cenário 4: Completou uma formação
 ```
 /certificado "Maria Silva" "React"
 ```
@@ -175,7 +222,8 @@ Gerará um certificado completo com código de verificação e salvará em arqui
 - ✅ Os comandos funcionam apenas neste projeto
 - ✅ Os certificados são fictícios (fins educacionais)
 - ✅ Os desafios são exemplos práticos
-- ✅ As trilhas são baseadas em dados simulados da DIO
+- ✅ As trilhas e acelerações são baseadas em dados simulados da DIO
+- ✅ Acelerações possuem `vitalicio: false` (acesso temporário)
 - ✅ Todos os comandos retornam Markdown formatado
 
 ## 🆘 Precisa de Ajuda?

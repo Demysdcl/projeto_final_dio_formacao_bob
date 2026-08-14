@@ -1,6 +1,6 @@
 # 🎯 Guia Rápido - Comandos Slash do Bob
 
-Este projeto possui **3 comandos slash personalizados** que você pode usar diretamente no chat do Bob!
+Este projeto possui **4 comandos slash personalizados** que você pode usar diretamente no chat do Bob!
 
 ## 🚀 Comandos Disponíveis
 
@@ -16,7 +16,22 @@ Exibe o plano de estudos completo de uma trilha da DIO.
 
 ---
 
-### 2. `/desafio <tecnologia> [nivel]`
+### 2. `/aceleracao [tecnologia]`
+Lista as acelerações AI Powered disponíveis na DIO.
+
+**Exemplos:**
+```
+/aceleracao
+/aceleracao Python
+/aceleracao React
+/aceleracao AWS
+```
+
+> Sem parâmetro, lista todas as 12 acelerações disponíveis.
+
+---
+
+### 3. `/desafio <tecnologia> [nivel]`
 Gera um desafio de código aleatório.
 
 **Exemplos:**
@@ -30,7 +45,7 @@ Gera um desafio de código aleatório.
 
 ---
 
-### 3. `/certificado "<nome>" "<tecnologia>"`
+### 4. `/certificado "<nome>" "<tecnologia>"`
 Gera um certificado de conclusão em Markdown.
 
 **Exemplos:**
@@ -81,9 +96,23 @@ ts-node .bob/test-slash-commands.ts
 
 ---
 
-## 🎓 Exemplo Completo de Uso
+## 🎓 Exemplos Completos de Uso
 
-### Cenário: Aprender Python
+### Cenário 1: Descobrir Acelerações AI Powered
+
+**Listar todas:**
+```
+/aceleracao
+```
+
+**Filtrar por tecnologia:**
+```
+/aceleracao React
+```
+
+---
+
+### Cenário 2: Aprender Python
 
 **Passo 1 - Ver a trilha:**
 ```

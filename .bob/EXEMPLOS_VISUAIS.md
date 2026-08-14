@@ -4,7 +4,51 @@ Este documento mostra exemplos reais de como os comandos slash funcionam no chat
 
 ---
 
-## 📝 Exemplo 1: Comando `/trilha Python`
+## ⚡ Exemplo 1: Comando `/aceleracao React`
+
+### Entrada:
+```
+/aceleracao React
+```
+
+### Saída:
+```markdown
+# ⚡ Acelerações DIO - AI Powered
+
+🔍 **Filtro aplicado: React**
+📚 **1 aceleração(ões) encontrada(s)**
+
+---
+
+## 1. Aceleração Global - React AI Powered
+
+### 📊 Informações Gerais
+- **Tecnologia:** React
+- **Nível:** Intermediário
+- **Módulos:** 5
+- **XP Total:** 7.000 pontos
+- **Acesso Vitalício:** ❌ Não
+
+### 🏆 Badges Disponíveis
+- 🎖️ React com IA
+- 🎖️ Next.js + LLM
+- 🎖️ AI Components
+
+### 🎥 Lives ao Vivo
+- 📺 React + Vercel AI SDK
+- 📺 Chatbots com React
+
+### 🎯 Próximos Passos
+1. Inscreva-se na aceleração
+2. Configure seu ambiente de desenvolvimento
+3. Participe das lives ao vivo
+4. Complete os desafios de código (use `/desafio`)
+5. Obtenha seu certificado (use `/certificado`)
+```
+
+---
+
+## 📝 Exemplo 2: Comando `/trilha Python`
 
 ### Entrada:
 ```
@@ -70,7 +114,7 @@ Este documento mostra exemplos reais de como os comandos slash funcionam no chat
 
 ---
 
-## 🎯 Exemplo 2: Comando `/desafio JavaScript Intermediário`
+## 🎯 Exemplo 3: Comando `/desafio JavaScript Intermediário`
 
 ### Entrada:
 ```
@@ -131,7 +175,7 @@ Saída: Tarefa adicionada e salva
 
 ---
 
-## 🎓 Exemplo 3: Comando `/certificado "João Silva" "Python"`
+## 🎓 Exemplo 4: Comando `/certificado "João Silva" "Python"`
 
 ### Entrada:
 ```
@@ -327,7 +371,7 @@ DIO-1720051589442-1234
 
 ---
 
-## 🔍 Exemplo 4: Comando `/help`
+## 🔍 Exemplo 5: Comando `/help`
 
 ### Entrada:
 ```
@@ -353,6 +397,20 @@ Sistema de comandos slash para interação com a plataforma DIO.
 - `/trilha JavaScript`
 - `/trilha React`
 - `/trilha Java`
+
+---
+
+## /aceleracao
+
+**Descrição:** Lista as acelerações AI Powered disponíveis na DIO, com filtro opcional por tecnologia
+
+**Uso:** `/aceleracao [tecnologia]`
+
+**Exemplos:**
+- `/aceleracao`
+- `/aceleracao Python`
+- `/aceleracao React`
+- `/aceleracao AWS`
 
 ---
 
@@ -396,7 +454,7 @@ Sistema de comandos slash para interação com a plataforma DIO.
 
 ---
 
-## ❌ Exemplo 5: Comando Inválido
+## ❌ Exemplo 6: Comando Inválido
 
 ### Entrada:
 ```
@@ -419,6 +477,9 @@ Use `/help` para ver os comandos disponíveis.
 /trilha Python
 /trilha python
 /trilha PYTHON
+/aceleracao
+/aceleracao react
+/aceleracao AWS
 /desafio JavaScript
 /desafio javascript intermediário
 /certificado "João Silva" "Python"
@@ -428,6 +489,7 @@ Use `/help` para ver os comandos disponíveis.
 ```
 trilha Python          (falta a barra /)
 /trilha                (falta o argumento)
+aceleracao             (falta a barra /)
 /certificado João Silva Python    (falta aspas)
 ```
 

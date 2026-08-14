@@ -38,20 +38,38 @@ console.log('\n');
 console.log('='.repeat(80));
 console.log('\n');
 
-// Teste 4: Comando /help
-console.log('📝 Teste 4: Comando /help\n');
+// Teste 4: Comando /aceleracao (todas)
+console.log('📝 Teste 4: Comando /aceleracao (todas)\n');
 console.log('-'.repeat(80));
-const resultado4 = processarComando('/help');
+const resultado4 = processarComando('/aceleracao');
 console.log(resultado4);
 console.log('\n');
 console.log('='.repeat(80));
 console.log('\n');
 
-// Teste 5: Comando inválido
-console.log('📝 Teste 5: Comando inválido\n');
+// Teste 5: Comando /aceleracao com filtro
+console.log('📝 Teste 5: Comando /aceleracao React\n');
 console.log('-'.repeat(80));
-const resultado5 = processarComando('/comando-inexistente');
+const resultado5 = processarComando('/aceleracao React');
 console.log(resultado5);
+console.log('\n');
+console.log('='.repeat(80));
+console.log('\n');
+
+// Teste 6: Comando /help
+console.log('📝 Teste 6: Comando /help\n');
+console.log('-'.repeat(80));
+const resultado6 = processarComando('/help');
+console.log(resultado6);
+console.log('\n');
+console.log('='.repeat(80));
+console.log('\n');
+
+// Teste 7: Comando inválido
+console.log('📝 Teste 7: Comando inválido\n');
+console.log('-'.repeat(80));
+const resultado7 = processarComando('/comando-inexistente');
+console.log(resultado7);
 console.log('\n');
 console.log('='.repeat(80));
 console.log('\n');
@@ -59,6 +77,7 @@ console.log('\n');
 console.log('✅ Todos os testes foram executados!\n');
 console.log('💡 Para usar no Bob, digite os comandos diretamente no chat:\n');
 console.log('   - /trilha <tecnologia>');
+console.log('   - /aceleracao [tecnologia]');
 console.log('   - /desafio <tecnologia> [nivel]');
 console.log('   - /certificado "<nome>" "<tecnologia>"');
 console.log('\n');
